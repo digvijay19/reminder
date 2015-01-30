@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ListView;
+import android.widget.GridView;
 
 import com.reminder.Adapters.NotesAdapter;
 import com.reminder.Models.MyNote;
@@ -22,9 +22,9 @@ public class NotesViewActivity extends ActionBarActivity {
         setContentView(R.layout.activity_reminder);
 
         notes = ((ReminderApp) getApplicationContext()).getNotes();
-        ListView notesList = (ListView) findViewById(R.id.notes);
+        GridView notesGrids = (GridView) findViewById(R.id.notes);
         notesAdapter = new NotesAdapter(notes, NotesViewActivity.this);
-        notesList.setAdapter(notesAdapter);
+        notesGrids.setAdapter(notesAdapter);
     }
 
     @Override
