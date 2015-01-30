@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="fill_parent">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/note_text_edit"
+        android:textColor="#212121"
+        android:textSize="18sp"
+        android:inputType="textMultiLine|textAutoComplete"
+        android:fadeScrollbars="false"
+        android:singleLine="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="true"
+        android:textIsSelectable="true"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/note_list_item"
+        android:gravity="left|top" />
+
+    <Button
+        android:id="@+id/save_note_changes"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/note_text_edit"
+        android:layout_alignStart="@+id/note_text_edit"
+        android:background="@drawable/green_check_fab"
+        android:layout_margin="5dp"
+        android:visibility="gone" />
+    <Button
+        android:id="@+id/delete_note"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/delete_fab"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
