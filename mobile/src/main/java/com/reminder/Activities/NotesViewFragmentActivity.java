@@ -24,7 +24,7 @@ public class NotesViewFragmentActivity extends FragmentActivity {
         int position = intent.getIntExtra("position", 0);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.notes_view_pager);
-        final NotesFragmentPagerAdapter notesFragmentPagerAdapter = new NotesFragmentPagerAdapter(getSupportFragmentManager(), notes, viewPager);
+        final NotesFragmentPagerAdapter notesFragmentPagerAdapter = new NotesFragmentPagerAdapter(NotesViewFragmentActivity.this, getSupportFragmentManager(), notes, viewPager);
         viewPager.setAdapter(notesFragmentPagerAdapter);
         viewPager.setCurrentItem(position);
     }

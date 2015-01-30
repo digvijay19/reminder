@@ -50,6 +50,4 @@ public class NotesViewActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
 }

@@ -1,5 +1,7 @@
 package com.reminder.Adapters;
 
+import android.app.Activity;
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -15,12 +17,14 @@ import java.util.ArrayList;
 
 public class NotesFragmentPagerAdapter extends FragmentPagerAdapter {
 
+    private Context context;
     private FragmentManager fragmentManager;
     private final ArrayList<MyNote> notes;
     private final ViewPager pager;
 
-    public NotesFragmentPagerAdapter(FragmentManager fragmentManager, ArrayList<MyNote> notes, ViewPager pager) {
+    public NotesFragmentPagerAdapter(Context context, FragmentManager fragmentManager, ArrayList<MyNote> notes, ViewPager pager) {
         super(fragmentManager);
+        this.context = context;
         this.fragmentManager = fragmentManager;
         this.notes = notes;
         this.pager = pager;
@@ -34,6 +38,8 @@ public class NotesFragmentPagerAdapter extends FragmentPagerAdapter {
             public void onClick(View v) {
                 notes.remove(pager.getCurrentItem());
                 notifyDataSetChanged();
+                if(notes.isEmpty())
+                    ((Activity)context).finish();
             }
         };
         return new NoteFragment().setContent(note).setDeleteListener(deleteListener);
