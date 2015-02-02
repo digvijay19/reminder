@@ -9,6 +9,7 @@ import com.reminder.Adapters.NotesFragmentPagerAdapter;
 import com.reminder.Models.MyNote;
 import com.reminder.R;
 import com.reminder.ReminderApp;
+import com.reminder.Transformers.DepthPageTransformer;
 
 import java.util.ArrayList;
 
@@ -27,5 +28,6 @@ public class NotesViewFragmentActivity extends FragmentActivity {
         final NotesFragmentPagerAdapter notesFragmentPagerAdapter = new NotesFragmentPagerAdapter(NotesViewFragmentActivity.this, getSupportFragmentManager(), notes, viewPager);
         viewPager.setAdapter(notesFragmentPagerAdapter);
         viewPager.setCurrentItem(position);
+        viewPager.setPageTransformer(true, new DepthPageTransformer());
     }
 }

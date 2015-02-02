@@ -7,41 +7,44 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/note_text_edit"
-        android:textColor="#212121"
+        android:textColor="@color/text_icons_color"
         android:textSize="18sp"
         android:inputType="textMultiLine|textAutoComplete"
         android:fadeScrollbars="false"
         android:singleLine="false"
-        android:layout_alignParentLeft="true"
+        android:fontFamily="sans-serif-light"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="false"
         android:layout_alignParentEnd="true"
         android:textIsSelectable="true"
         android:paddingLeft="15dp"
-        android:paddingTop="15dp"
+        android:paddingTop="50dp"
         android:paddingRight="15dp"
         android:paddingBottom="50dp"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/note_list_item"
+        android:background="@color/primary_color"
         android:gravity="left|top" />
 
     <Button
         android:id="@+id/save_note_changes"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/note_text_edit"
-        android:layout_alignStart="@+id/note_text_edit"
         android:background="@drawable/green_check_fab"
-        android:layout_margin="5dp"
-        android:visibility="gone" />
+        android:visibility="visible"
+        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/delete_note"
+        android:layout_toStartOf="@+id/delete_note" />
     <Button
         android:id="@+id/delete_note"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/delete_fab"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="23dp"
+        android:layout_marginEnd="23dp" />
 
 </RelativeLayout>

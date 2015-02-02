@@ -12,6 +12,7 @@
         android:id="@+id/note_text"
         android:textColor="@color/primary_text_color"
         android:background="@drawable/note_list_item"
+        android:fontFamily="sans-serif-light"
         android:padding="10dp"
         android:textSize="12sp"
         android:visibility="visible"

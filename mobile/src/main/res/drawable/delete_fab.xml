@@ -119,7 +119,7 @@
             <solid android:color="@color/accent_color"/>
         </shape>
     </item>
-    <item android:drawable="@drawable/abc_ic_clear_mtrl_alpha"
+    <item android:drawable="@android:drawable/ic_menu_delete"
         android:bottom="5dp"
         android:left="5dp"
         android:top="5dp"

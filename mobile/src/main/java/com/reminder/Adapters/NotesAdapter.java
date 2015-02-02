@@ -44,11 +44,9 @@ public class NotesAdapter extends BaseAdapter {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         NoteHolder noteHolder;
-        if(convertView == null) {
-            convertView = this.inflater.inflate(R.layout.note, parent, false);
-            noteHolder = new NoteHolder(convertView, this.notes.get(position));
-            convertView.setTag(noteHolder);
-        }
+        convertView = this.inflater.inflate(R.layout.note, parent, false);
+        noteHolder = new NoteHolder(convertView, this.notes.get(position));
+        convertView.setTag(noteHolder);
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
