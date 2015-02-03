@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:background="@color/text_icons_color">
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/note_text_edit"
-        android:textColor="@color/text_icons_color"
+        android:textColor="@color/primary_text_color"
         android:textSize="18sp"
         android:inputType="textMultiLine|textAutoComplete"
         android:fadeScrollbars="false"
@@ -22,7 +23,7 @@
         android:paddingRight="15dp"
         android:paddingBottom="50dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/primary_color"
+        android:background="@drawable/note_list_item"
         android:gravity="left|top" />
 
     <Button
@@ -30,7 +31,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/green_check_fab"
-        android:visibility="visible"
+        android:visibility="gone"
         android:layout_marginRight="24dp"
         android:layout_marginEnd="24dp"
         android:layout_alignParentTop="true"

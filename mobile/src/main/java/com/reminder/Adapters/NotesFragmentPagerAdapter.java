@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.reminder.Fragments.NoteFragment;
 import com.reminder.Models.MyNote;
@@ -18,14 +17,12 @@ import java.util.ArrayList;
 public class NotesFragmentPagerAdapter extends FragmentPagerAdapter {
 
     private Context context;
-    private FragmentManager fragmentManager;
     private final ArrayList<MyNote> notes;
     private final ViewPager pager;
 
     public NotesFragmentPagerAdapter(Context context, FragmentManager fragmentManager, ArrayList<MyNote> notes, ViewPager pager) {
         super(fragmentManager);
         this.context = context;
-        this.fragmentManager = fragmentManager;
         this.notes = notes;
         this.pager = pager;
     }
@@ -42,20 +39,12 @@ public class NotesFragmentPagerAdapter extends FragmentPagerAdapter {
                     ((Activity)context).finish();
             }
         };
-        return new NoteFragment().setContent(note).setDeleteListener(deleteListener);
+        return new NoteFragment().setContent(note).setDeleteListener(deleteListener).setContext(context);
     }
 
     @Override
     public int getItemPosition(Object object) {
         return PagerAdapter.POSITION_NONE;
-    }
-
-    @Override
-    public void destroyItem(ViewGroup container, int position, Object object) {
-        super.destroyItem(container, position, object);
-        android.support.v4.app.FragmentTransaction trans = fragmentManager.beginTransaction();
-        trans.remove((Fragment)object);
-        trans.commit();
     }
 
     @Override
