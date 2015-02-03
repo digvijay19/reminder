@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:clickable="true"
     android:visibility="visible"
-    >
+    android:transitionGroup="true">
 
     <TextView
         android:layout_width="160dp"

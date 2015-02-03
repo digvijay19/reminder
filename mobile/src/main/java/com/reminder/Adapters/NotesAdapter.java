@@ -62,4 +62,8 @@ public class NotesAdapter extends BaseAdapter {
         notes.add(new MyNote(""));
         notifyDataSetChanged();
     }
+
+    public ArrayList<MyNote> getNotes() {
+        return notes;
+    }
 }
