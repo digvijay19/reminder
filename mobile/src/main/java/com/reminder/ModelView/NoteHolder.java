@@ -16,4 +16,8 @@ public class NoteHolder {
         textView = (TextView) view.findViewById(R.id.note_text);
         textView.setText(myNote.content());
     }
+
+    public int getPosition() {
+        return myNote.getPosition();
+    }
 }
